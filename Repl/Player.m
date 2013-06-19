@@ -61,7 +61,7 @@
     }
     
     // Открыть файл и запустить
-    sound = [sound initWithContentsOfFile:path byReference:false];
+    sound = [[NSSound alloc] initWithContentsOfFile:path byReference:YES];
     [sound play];
     isPlay = YES;
     [menu markPause:1];
