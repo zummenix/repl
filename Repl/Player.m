@@ -12,8 +12,8 @@
 
 - (id)init {
     if (self = [super init]) {
-        sound = [NSSound alloc];
-        [sound setDelegate: self];
+//        sound = [NSSound alloc];
+//        [sound setDelegate: self];
     }
 
     return self;
@@ -62,6 +62,7 @@
     
     // Открыть файл и запустить
     sound = [[NSSound alloc] initWithContentsOfFile:path byReference:YES];
+    [sound setDelegate:self];
     [sound play];
     isPlay = YES;
     [menu markPause:1];
